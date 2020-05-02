@@ -49,7 +49,7 @@ nav{
     position: fixed;
     top: 0;
     z-index: 100;
-    /* transition: ease-in-out 0.5s; */
+    transition: ease-in-out 0.5s; 
 }
 
 .nav{
@@ -58,6 +58,7 @@ nav{
     height: 80px;
     width: 100%;
     align-items: center;
+    padding: 0 40px;
 }
 
 .nav .logo{
@@ -211,7 +212,6 @@ nav{
 
 
 .questions{
-    width: 100%;
     height: 600px;
     display: flex;
     justify-content: space-between;
@@ -250,42 +250,331 @@ nav{
 
 /* Resources */
 
-.resource{
-    background: #266FFF;
-    min-height: 800px;
-    padding-top: 95px;
+.results{
+    background: #2570FF;
+    padding-top: 30px;
 }
 
 .conten-resul{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .numbers{
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.number{
-    padding-left: 35px;
-    margin: 0 40px 40px 0;
-    width: 230px;
-    height: 230px;
-    border-radius: 5%;
-    background: rgba(255, 255, 255, 0.17);
-}
-
-.number>h4{
-    display: inline-block;
-    margin-top: 50px;
-    font-size: 40px;
-    font-weight: 400;
+.numbers .number{
+    padding: 40px 35px;
+    width: 45%;
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.number p{
-    /* font-size: 40px; */
+.numbers .number h4{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+ 
+.numbers .number p{
+    color: #f2f5fc;
+    font-weight: 300;
+} 
+
+.results-text{
+    width: 37%;
+}
+
+.results-text h4{
+    color: #fff;
+    font-size: 40px;
+}
+
+.results-text p{
+    color: #fff;
+    font-weight: 300;
+    margin:  20px 0;
+}
+
+.results-text>a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Services */
+
+.service{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service>img{
+    width: 500px;
+}
+
+.box-skills{
+    margin: 30px 30px 0 0;   
+}
+
+.box-skills h4{
+    font-size: 24px;
+    background: #f2f2f2;
+    width: 350px;
+    border-radius: 6px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px ;
+}
+
+.box-skills i{
+    color : #1fde82;
+    font-size: 20px;
+}
+
+/* FOOTER */
+
+footer{
+    background: #f2f2f2;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter{
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter h4{
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter a{
+    display: block;
+    text-decoration: none;
+    color: #5d6678;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.partFooter a:hover{
+    color: #1fde82;
+}
+
+.partFooter img{
+    width: 70%;
+}
+
+.social-media i{
+    font-size: 20px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
     margin-top: 20px;
-    font-weight: 100;
-    color: #f2f2f2;
+    text-align: center;
+    transition: all ease-in-out .3s;
+    margin-right: 5px;
+}
+
+.social-media i:hover{
+    color: #fff;
+    background-color: #1fde82;
+    border-color:  #1fde82;
+}
+
+/* Breakpoints responsive */
+
+@media screen and (max-width:800px){
+    .titulo{
+        font-size: 45px;
+    }
+
+    .contenido-header{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 720px;
+    }
+
+    .contenido-header>img{
+        width: 85%;
+      }
+
+    .textos-header{
+        margin: 0;
+    }
+
+    /* Abaut us */
+
+    .articulo{
+        width: 45%;
+    }
+
+    /* Questions */
+
+    .questions{
+        height: 720px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .questions>img{
+        width: 85%;
+    }
+
+    /* Results */
+
+   .conten-resul{
+       flex-direction: column-reverse;
+   }
+
+   .results-text>a{
+       margin-bottom: 60px;
+   }
+
+   .numbers{
+       width: 100%;
+   }
+
+   .results-text{
+       width: 100%;
+   }
+
+   /* Service */
+
+   .service{
+       flex-direction: column-reverse;
+       align-items: center;
+   }
+
+   .box-skills{
+       margin: 0 0 40px 0;
+       width: 80%;
+   }
+
+   .box-skills>h4{
+       width: 100%;
+   }
+
+   .service>img{
+       width: 85%;
+   }
+
+   /* Footer */
+
+   footer{
+       justify-content: space-evenly;
+   }
+
+   .partFooter{
+       width: 40%;
+       margin-bottom: 40px;
+   }
+
+}
+
+
+@media screen and (max-width:600px) {
+  .titulo{
+      font-size: 35px;
+  }
+
+  h1{
+      font-size: 40px;
+  }
+
+  .contenido-header{
+      height: 650px;
+  }
+
+  .nav{
+    padding:  0 10px;
+  }
+
+  .numbers .number{
+    width: 70%;
+  }
+
+  /* About us */
+
+  .articulo{
+    width: 70%;
+  }
+
+  .partFooter{
+    width: 80%;
+    text-align: left;
+  }
+
+  .enlaces-header{
+      position: fixed;
+      background: #667db6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      clip-path: circle(0% at 100% 0);
+      transition: ease-in-out 0.5s; 
+  }
+
+  .nav .menudos{
+    -webkit-clip-path: circle(150% at 100% 0);  
+    clip-path: circle(150% at 100% 0);
+  }
+
+  .nav .enlaces-header a{
+      color: #fff;
+      font-size: 18px;
+  }
+
+  .hamburguer{
+      display: block;
+  }
+
+}
+
+
+
+@media screen and (max-width:460px) {
+
+  .numbers .number{
+    width: 70%;
+  }
+
+   /* About us */
+
+  .articulo{
+     width: 90%;
+  }
+
+
 }
